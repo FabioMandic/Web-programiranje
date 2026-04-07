@@ -9,6 +9,15 @@
 <body class="netflix-theme">
     <header>
         <div class="logo">NETFLIX <span class="sub-logo">Dynamic</span></div>
+        <div class="nav-container">
+            <nav role="navigation" class="dropdown-nav">
+                <ul class="nav-menu">
+                    <li><a href="/">Početna</a></li>
+                    <li><a href="/slike">Galerija</a></li>
+                    <li><a href="/grafikon">Grafikon</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main class="container">
@@ -27,12 +36,19 @@
                     <div id="img<%= index %>" class="lightbox">
                         <a href="#" class="close">&times;</a>
                         <img src="/<%= slika.url %>" alt="Velika slika">
-                        <p style="color: white; text-align: center;"><%= slika.opis %></p>
+                        <p style="color: white; text-align: center; margin-top: 10px;">
+                            <strong><%= slika.naslov %></strong><br>
+                            <%= slika.opis %>
+                        </p>
                     </div>
                 <% }); %>
 
             </div>
         </section>
     </main>
+
+    <footer>
+        <p>&copy; 2026. Web Programiranje - LV2</p>
+    </footer>
 </body>
 </html>

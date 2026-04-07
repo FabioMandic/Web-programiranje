@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <title>Dinamička Galerija</title>
+    <link rel="stylesheet" href="/style_slike.css">
+</head>
+<body>
+    <h1>Dinamički prikaz Netflix kataloga</h1>
+    <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+        <% slike.forEach(slika => { %>
+            <div style="border: 1px solid #ccc; padding: 10px; width: 200px;">
+                <h3><%= slika.naslov %></h3>
+                <img src="<%= slika.url %>" alt="<%= slika.naslov %>" style="width: 100%;">
+                <p><%= slika.opis %></p>
+            </div>
+        <% }); %>
+    </div>
+    <br>
+    <a href="/">Povratak na početnu</a>
+</body>
+</html>

@@ -2,21 +2,37 @@
 <html lang="hr">
 <head>
     <meta charset="UTF-8">
-    <title>Dinamička Galerija</title>
+    <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/style_slike.css">
+    <title>Netflix - Dinamička Galerija</title>
 </head>
-<body>
-    <h1>Dinamički prikaz Netflix kataloga</h1>
-    <div style="display: flex; flex-wrap: wrap; gap: 20px;">
-        <% slike.forEach(slika => { %>
-            <div style="border: 1px solid #ccc; padding: 10px; width: 200px;">
-                <h3><%= slika.naslov %></h3>
-                <img src="<%= slika.url %>" alt="<%= slika.naslov %>" style="width: 100%;">
-                <p><%= slika.opis %></p>
+<body class="netflix-theme">
+    <header>
+        <div class="logo">NETFLIX <span class="sub-logo">Dynamic</span></div>
+    </header>
+
+    <main class="container">
+        <section class="galerija"> 
+            <h1>Dinamička galerija (Zadatak 3)</h1>
+            <div class="img-gallery-magnific">
+                
+                <% slike.forEach((slika, index) => { %>
+                    <figure class="galerija_slika magnific-img">
+                        <a href="#img<%= index %>">
+                            <img src="/<%= slika.url %>" alt="<%= slika.naslov %>">
+                        </a>
+                        <figcaption><%= slika.naslov %></figcaption>
+                    </figure>
+
+                    <div id="img<%= index %>" class="lightbox">
+                        <a href="#" class="close">&times;</a>
+                        <img src="/<%= slika.url %>" alt="Velika slika">
+                        <p style="color: white; text-align: center;"><%= slika.opis %></p>
+                    </div>
+                <% }); %>
+
             </div>
-        <% }); %>
-    </div>
-    <br>
-    <a href="/">Povratak na početnu</a>
+        </section>
+    </main>
 </body>
 </html>

@@ -1,0 +1,7 @@
+[
+  { "naslov": "Netflix Serija 1", "opis": "Opis prve serije", "url": "images/netflix1.jpg" },
+  { "naslov": "Netflix Serija 2", "opis": "Opis druge serije", "url": "images/netflix2.jpg" },
+  { "naslov": "Netflix Serija 3", "opis": "Opis treće serije", "url": "images/netflix3.jpg" },
+  { "naslov": "Netflix Serija 4", "opis": "Opis četvrte serije", "url": "images/netflix4.jpg" },
+  { "naslov": "Netflix Serija 5", "opis": "Opis pete serije", "url": "images/netflix5.jpg" }
+]

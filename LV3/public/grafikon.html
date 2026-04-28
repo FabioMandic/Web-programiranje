@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vizualizacija Netflix podataka pomoću CSS-only grafikona.">
+    <link rel="stylesheet" href="style.css">
+    <title>Netflix Statistika - Grafikon</title>
+</head>
+<body class="netflix-theme">
+    <header>
+        <div class="logo">NETFLIX <span class="sub-logo">Statistics</span></div>
+        <div class="nav-container">
+            <button class="menu-btn">IZBORNIK</button>
+            <nav role="navigation" aria-label="Glavna navigacija" class="dropdown-nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Početna</a></li>
+                    <li><a href="slike.html">Galerija</a></li>
+                    <li><a href="grafikon.html">Grafikon</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="content-grafikon">
+        <section class="chart-section">
+            <h2>Omjer sadržaja: Filmovi vs TV Serije</h2>
+            <p>Vizualni prikaz distribucije kataloga temeljen na dostupnim podacima.</p>
+            
+            <div class="charts-container">
+                <div class="pie-wrapper">
+                    <div class="pie-chart-netflix" aria-label="Grafikon omjera sadržaja: 70% filmovi, 30% serije"></div>
+                    <div class="legend">
+                        <div class="legend-item"><span class="box movie"></span> Filmovi (70%)</div>
+                        <div class="legend-item"><span class="box tv"></span> TV Serije (30%)</div>
+                    </div>
+                </div>
+
+                <div class="bar-wrapper">
+                    <h3>Top države po produkciji</h3>
+                    <div class="bar-chart">
+                        <div class="bar" style="--bar-value: 85%;" data-info="SAD: 85%"><span>SAD</span></div>
+                        <div class="bar" style="--bar-value: 45%;" data-info="Indija: 45%"><span>Indija</span></div>
+                        <div class="bar" style="--bar-value: 30%;" data-info="UK: 30%"><span>UK</span></div>
+                        <div class="bar" style="--bar-value: 20%;" data-info="Francuska: 20%"><span>FR</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <article class="analysis-section">
+        <div class="analysis-card">
+            <h2>Analiza i interpretacija podataka</h2>
+            <p>Analiza Netflixovog kataloga ukazuje na jasnu prevlast igranih filmova u odnosu na serijalni sadržaj, što potvrđuje strategiju platforme kao digitalnog kina. 
+               Vizualizacija produkcije po državama ističe Sjedinjene Američke Države kao apsolutnog lidera, dok Indija i Ujedinjeno Kraljevstvo pokazuju stabilan rast u segmentu originalne produkcije.</p>
+            
+    </article>
+
+    <footer>
+        <p>&copy; 2026. Web Programiranje - LV1</p>
+    </footer>
+</body>
+</html>

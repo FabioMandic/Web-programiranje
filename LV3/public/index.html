@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <title>Netflix Videoteka - LV3</title>
+</head>
+<body class="netflix-theme">
+    <header>
+        <div class="logo">NETFLIX <span class="sub-logo">Videoteka</span></div>
+        <div class="nav-container">
+            <button class="menu-btn">IZBORNIK</button>
+            <nav class="dropdown-nav">
+                <ul class="nav-menu">
+                    <li><a href="/">Početna</a></li>
+                    <li><a href="/slike">Galerija</a></li>
+                    <li><a href="grafikon.html">Grafikon</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="content">
+        <section id="videoteka-sekcija">
+            <h2>Popis filmova za posudbu</h2>
+            
+            <div id="filteri" class="filter-container">
+                <div class="filter-group">
+                    <label>Žanr:</label>
+                    <select id="filter-genre">
+                        <option value="">-- Svi žanrovi --</option>
+                        <option value="Action">Action</option>
+                        <option value="Comedy">Comedy</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Crime">Crime</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>Godina (od-do):</label>
+                    <div class="input-row">
+                        <input type="number" id="filter-year-from" placeholder="Od">
+                        <input type="number" id="filter-year-to" placeholder="Do">
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <label>Država:</label>
+                    <input type="text" id="filter-country" placeholder="npr. USA">
+                </div>
+
+                <div class="filter-group">
+                    <label>Min. ocjena: <span id="rating-value">0</span></label>
+                    <input type="range" id="filter-rating" min="0" max="10" step="0.1" value="0">
+                </div>
+                
+                <button id="btn-filtriraj" class="menu-btn">Filtriraj</button>
+            </div>
+
+
+
+            
+            <table id="filmovi-tablica" class="netflix-table">
+                <thead>
+                    <tr>
+                        <th>Naslov</th>
+                        <th>Godina</th>
+                        <th>Žanr</th>
+                        <th>Trajanje</th>
+                        <th>Država</th>
+                        <th>Ocjena</th>
+                        <th>Akcija</th>
+                    </tr>
+                </thead>
+                <tbody id="filmovi-tablica-tbody"></tbody>
+            </table>
+        </section>
+
+
+
+        <aside id="kosarica" class="sidebar-info">
+            <h3>Moja košarica</h3>
+            <ul id="lista-kosarice"></ul>
+            <button id="potvrdi-kosaricu" class="menu-btn" style="width: 100%; margin-top: 20px;">Potvrdi posudbu</button>
+        </aside>
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

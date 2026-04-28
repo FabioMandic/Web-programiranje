@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/style_slike.css">
+    <title>Netflix - Dinamička Galerija</title>
+</head>
+<body class="netflix-theme">
+    <header>
+        <div class="logo">NETFLIX <span class="sub-logo">Dynamic</span></div>
+        <div class="nav-container">
+            <nav role="navigation" class="dropdown-nav">
+                <ul class="nav-menu">
+                    <li><a href="/">Početna</a></li>
+                    <li><a href="/slike">Galerija</a></li>
+                    <li><a href="/grafikon">Grafikon</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="galerija"> 
+            <h1>Dinamička galerija (Zadatak 3)</h1>
+            <div class="img-gallery-magnific">
+                
+                <% slike.forEach((slika, index) => { %>
+                    <figure class="galerija_slika magnific-img">
+                        <a href="#img<%= index %>">
+                            <img src="/<%= slika.url %>" alt="<%= slika.naslov %>">
+                        </a>
+                        <figcaption><%= slika.naslov %></figcaption>
+                    </figure>
+
+                    <div id="img<%= index %>" class="lightbox">
+                        <a href="#" class="close">&times;</a>
+                        <img src="/<%= slika.url %>" alt="Velika slika">
+                        <p style="color: white; text-align: center; margin-top: 10px;">
+                            <strong><%= slika.naslov %></strong><br>
+                            <%= slika.opis %>
+                        </p>
+                    </div>
+                <% }); %>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026. Web Programiranje - LV2</p>
+    </footer>
+</body>
+</html>

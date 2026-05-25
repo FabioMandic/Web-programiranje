@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Abel');
+
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #141414; 
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.container h1 {
+    color: #E50914; 
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 40px 0;
+}
+
+
+.img-gallery-magnific {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+
+.magnific-img {
+    flex: 1 1 280px; 
+    max-width: 350px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #181818;
+    transition: all 0.4s ease;
+}
+
+
+.magnific-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(100%); 
+    transition: all 0.5s ease;
+    border: 2px solid transparent;
+}
+
+
+.magnific-img:hover img {
+    filter: grayscale(0%); 
+    transform: scale(1.05);
+    border-color: #E50914;
+}
+
+.magnific-img:hover {
+    box-shadow: 0 10px 25px rgba(229, 9, 20, 0.5); 
+    z-index: 5;
+}
+
+.magnific-img figcaption {
+    padding: 10px;
+    font-size: 0.9rem;
+    color: #b3b3b3;
+    background: #181818;
+}
+
+
+.lightbox {
+    display: none; 
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    justify-content: center;
+    align-items: center;
+}
+
+
+.lightbox:target {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    border: 3px solid #E50914;
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+    animation: zoomIn 0.3s ease;
+}
+
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 60px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: #E50914;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+
+@media (max-width: 600px) {
+    .magnific-img {
+        flex: 1 1 100%; 
+    }
+    
+    .container h1 {
+        font-size: 1.8rem;
+    }
+}

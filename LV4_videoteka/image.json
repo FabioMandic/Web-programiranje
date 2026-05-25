@@ -1,0 +1,7 @@
+[
+  { "naslov": "Stranger Things", "opis": "SF horor serija", "url": "images/netflix1.jpg" },
+  { "naslov": "The Crown", "opis": "Povijesna drama", "url": "images/netflix2.jpg" },
+  { "naslov": "Money Heist", "opis": "Kriminalistički triler", "url": "images/netflix3.jpg" },
+  { "naslov": "Dark", "opis": "Njemačka misterija", "url": "images/netflix4.jpg" },
+  { "naslov": "The Witcher", "opis": "Fantasy spektakl", "url": "images/netflix5.jpg" }
+]
